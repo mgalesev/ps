@@ -1,0 +1,3 @@
+ps_web:
+    resource: "@PsWebBundle/Resources/config/routing.yml"
+    prefix:   /

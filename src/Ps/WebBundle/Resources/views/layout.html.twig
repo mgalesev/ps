@@ -1,0 +1,53 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    {{ parent() }}
+
+    <link rel="stylesheet" href="{{ asset('bundles/psweb/css/bootstrap.min.css') }}" />
+{% endblock %}
+
+{% block head_javascripts %}
+    {{ parent() }}
+
+    <script type="text/javascript" src="{{ asset('bundles/psweb/js/bootstrap.min.js') }}"></script>
+{% endblock %}
+
+
+{% block body %}
+
+    <nav id="mainNav" class="navbar navbar-default navbar-custom" style="margin-bottom: 0;">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand page-scroll" href="#">Souldock API</a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#">ST</a>
+                    </li>
+                    <li>
+                        <a href="#">GA</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    {% block content %}
+    {% endblock %}
+
+    {% block footer %}
+        <footer>
+            <div class="container text-center navbar navbar-fixed-bottom">
+                <p>Copyright &copy; Souldock 2016</p>
+            </div>
+        </footer>
+    {% endblock %}
+{% endblock %}
